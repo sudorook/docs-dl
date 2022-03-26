@@ -1,0 +1,99 @@
+#! /bin/bash
+
+declare -A URL
+declare -A CMD
+declare -A TEST
+
+URL["awk"]="https://www.gnu.org/software/gawk/manual/gawk.pdf"
+CMD["awk"]="awk --version"
+TEST["awk"]=5.1.1
+
+URL["bash"]="https://www.gnu.org/software/bash/manual/bash.pdf"
+CMD["bash"]="bash --version"
+TEST["bash"]=5.1.16
+
+URL["bc"]="https://www.gnu.org/software/bc/manual/html_mono/bc.html"
+CMD["bc"]="bc --version"
+TEST["bc"]=1.07.1
+
+URL["biopython"]="https://biopython.org/DIST/docs/tutorial/Tutorial-MAJOR.MINOR.pdf"
+CMD["biopython"]="python -c 'from Bio import __version__ as v; print(v)'"
+TEST["biopython"]=1.79
+
+URL["ffmpeg"]="https://ffmpeg.org/ffmpeg-all.html"
+CMD["ffmpeg"]="ffmpeg -version"
+TEST["ffmpeg"]=5.0
+
+URL["fish"]="https://fishshell.com/docs/MAJOR.MINOR/index.html \
+             https://fishshell.com/docs/MAJOR.MINOR/tutorial.html"
+CMD["fish"]="fish --version"
+TEST["fish"]=3.3.1
+
+URL["gcc"]="https://gcc.gnu.org/onlinedocs/gcc-MAJOR.MINOR.PATCH/gcc.pdf"
+CMD["gcc"]="gcc --version"
+TEST["gcc"]=11.2.0
+
+URL["gimp"]="https://download.gimp.org/pub/gimp/help/gimp-help-MAJOR.MINOR.0.tar.bz2"
+CMD["gimp"]="gimp --version"
+TEST["gimp"]=2.10.30
+
+URL["inkscape"]="https://inkscape-manuals.readthedocs.io/_/downloads/en/latest/pdf/"
+CMD["inkscape"]="inkscape --version"
+TEST["inkscape"]=1.1.2
+
+URL["julia"]="https://raw.githubusercontent.com/JuliaLang/docs.julialang.org/assets/julia-MAJOR.MINOR.PATCH.pdf"
+CMD["julia"]="julia --version"
+TEST["julia"]=1.7.2
+
+URL["lua"]="https://www.lua.org/ftp/refman-MAJOR.MINOR.tar.gz"
+CMD["lua"]="lua -v"
+TEST["lua"]=5.4
+
+URL["matplotlib"]="https://matplotlib.org/MAJOR.MINOR.PATCH/Matplotlib.pdf"
+CMD["matplotlib"]="python -c 'from matplotlib import __version__ as v; print(v)'"
+TEST["matplotlib"]=3.5.1
+
+URL["nodejs"]="https://nodejs.org/docs/latest-vMAJOR.x/api/all.html"
+CMD["nodejs"]="node --version"
+TEST["nodejs"]=17.8.0
+
+URL["numpy"]="https://numpy.org/doc/MAJOR.MINOR/numpy-ref.pdf \
+              https://numpy.org/doc/MAJOR.MINOR/numpy-user.pdf"
+CMD["numpy"]="python -c 'from numpy import __version__ as v; print(v)'"
+TEST["numpy"]=1.22
+
+URL["octave"]="https://octave.org/doc/octave-MAJOR.MINOR.PATCH.pdf"
+CMD["octave"]="octave --version"
+TEST["octave"]=6.4.0
+
+URL["pandas"]="https://pandas.pydata.org/pandas-docs/version/MAJOR.MINOR.PATCH/pandas.pdf"
+CMD["pandas"]="python -c 'from pandas import __version__ as v; print(v)'"
+TEST["pandas"]=1.4.1
+
+URL["python"]="https://docs.python.org/MAJOR/archives/python-MAJOR.MINOR.PATCH-docs-pdf-letter.zip"
+CMD["python"]="python --version"
+TEST["python"]=3.10.3
+
+URL["r"]="https://cran.r-project.org/doc/manuals/r-release/fullrefman.pdf"
+CMD["r"]="R --version"
+TEST["r"]=4.0.5
+
+URL["scipy"]="https://docs.scipy.org/doc/scipy-MAJOR.MINOR.PATCH/scipy-ref-MAJOR.MINOR.PATCH.pdf"
+CMD["scipy"]="python -c 'from scipy import __version__ as v; print(v)'"
+TEST["scipy"]=1.8.0
+
+URL["sed"]="https://www.gnu.org/software/sed/manual/sed.pdf"
+CMD["sed"]="sed --version"
+TEST["sed"]=4.8
+
+URL["sklearn"]="https://scikit-learn.org/MAJOR.MINOR/_downloads/scikit-learn-docs.zip"
+CMD["sklearn"]="python -c 'from sklearn import __version__ as v; print(v)'"
+TEST["sklearn"]=1.0.2
+
+URL["zsh"]="https://sourceforge.net/projects/zsh/files/zsh-doc/MAJOR.MINOR.PATCH/zsh-MAJOR.MINOR.PATCH-doc.tar.xz"
+CMD["zsh"]="zsh --version"
+TEST["zsh"]=5.8.1
+
+export URL
+export CMD
+export TEST
