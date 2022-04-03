@@ -29,7 +29,8 @@ URL["fish"]="https://fishshell.com/docs/MAJOR.MINOR/index.html \
 CMD["fish"]="fish --version"
 TEST["fish"]=3.3.1
 
-URL["gcc"]="https://gcc.gnu.org/onlinedocs/gcc-MAJOR.MINOR.PATCH/gcc.pdf"
+URL["gcc"]="https://gcc.gnu.org/onlinedocs/gcc-MAJOR.MINOR.PATCH/gcc.pdf \
+            https://gcc.gnu.org/onlinedocs/gcc-MAJOR.MINOR.PATCH/libstdc++-manual.pdf.gz"
 CMD["gcc"]="gcc --version"
 TEST["gcc"]=11.2.0
 
