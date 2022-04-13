@@ -19,6 +19,13 @@ function test_parser {
       else
         show_success "✓ ${key}"
       fi
+    else
+      if command -v "${key%% *}" >/dev/null; then
+        all_good=false
+        show_error "✗ ${key}"
+      else
+        show_warning "${key}"
+      fi
     fi
   done
 
