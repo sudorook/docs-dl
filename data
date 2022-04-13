@@ -75,6 +75,12 @@ URL["pandas"]="https://pandas.pydata.org/pandas-docs/version/MAJOR.MINOR.PATCH/p
 CMD["pandas"]="python -c 'from pandas import __version__ as v; print(v)'"
 TEST["pandas"]=1.4.1
 
+URL["parallel"]="https://www.gnu.org/software/parallel/parallel_tutorial.pdf \
+                 https://www.gnu.org/software/parallel/parallel.pdf \
+                 https://www.gnu.org/software/parallel/parallel_cheat.pdf"
+CMD["parallel"]="parallel --version"
+TEST["parallel"]=20220322
+
 URL["python"]="https://docs.python.org/MAJOR/archives/python-MAJOR.MINOR.PATCH-docs-pdf-letter.zip"
 CMD["python"]="python --version"
 TEST["python"]=3.10.3
