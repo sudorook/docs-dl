@@ -22,9 +22,16 @@ function test_urls {
     IFS=' ' read -r -a urls <<< "${URL[${key}]}"
     for tmp in "${urls[@]}"; do
       url="${tmp}"
-      url="${url//MAJOR/${version[0]}}"
-      url="${url//MINOR/${version[1]}}"
-      [ "${#version[@]}" -eq 3 ] && url="${url//PATCH/${version[2]}}"
+      if [ "${#version[@]}" -eq 3 ]; then
+        url="${url//MAJOR/${version[0]}}"
+        url="${url//MINOR/${version[1]}}"
+        url="${url//PATCH/${version[2]}}"
+      elif [ "${#version[@]}" -eq 2 ]; then
+        url="${url//MAJOR/${version[0]}}"
+        url="${url//MINOR/${version[1]}}"
+      elif [ "${#version[@]}" -eq 1 ]; then
+        url="${url//MAJOR/${version[0]}}"
+      fi
       if try_wget "${url}"; then
         show_success "${key}: ${url}"
       else

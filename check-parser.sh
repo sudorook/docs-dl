@@ -13,7 +13,7 @@ function test_parser {
   for key in "${!CMD[@]}"; do
     cmd="${CMD[${key}]}"
     if version="$(eval "${cmd}" 2>/dev/null | parse_version)"; then
-      if ! [[ "${version}" =~ ^[0-9]+\.[0-9]+(\.[0-9]+)?$ ]]; then
+      if ! [[ "${version}" =~ ^[0-9]+(\.[0-9]+)?(\.[0-9]+)?$ ]]; then
         all_good=false
         show_error "✗ ${key}"
       else
