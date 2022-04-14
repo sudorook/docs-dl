@@ -4,6 +4,10 @@ declare -A URL
 declare -A CMD
 declare -A TEST
 
+URL["armadillo"]="http://arma.sourceforge.net/docs.html"
+CMD["armadillo"]="pkg-config --modversion armadillo"
+TEST["armadillo"]=11.0.0
+
 URL["awk"]="https://www.gnu.org/software/gawk/manual/gawk.pdf"
 CMD["awk"]="awk --version"
 TEST["awk"]=5.1.1
@@ -27,6 +31,10 @@ TEST["biopython"]=1.79
 URL["coreutils"]="https://www.gnu.org/software/coreutils/manual/coreutils.pdf"
 CMD["coreutils"]="ls --version"
 TEST["coreutils"]=9.0
+
+URL["eigen"]="https://eigen.tuxfamily.org/dox/eigen-doc.tgz"
+CMD["eigen"]="pkg-config --modversion eigen3"
+TEST["eigen"]=3.4.0
 
 URL["ffmpeg"]="https://ffmpeg.org/ffmpeg-all.html"
 CMD["ffmpeg"]="ffmpeg -version"
