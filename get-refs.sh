@@ -19,7 +19,7 @@ function download_wrapper {
   local version
   local url
   local urls
-  local tmp
+  local idx
 
   if ! [[ -v CMD[${bin}] ]]; then
     show_warning "${bin@Q} not supported. Skipping."
@@ -34,8 +34,8 @@ function download_wrapper {
   fi
 
   IFS=' ' read -r -a urls <<< "${URL[${bin}]}"
-  for tmp in "${urls[@]}"; do
-    url="${tmp}"
+  for idx in "${!urls[@]}"; do
+    url="${urls[$idx]}"
     if [ "${#version[@]}" -eq 3 ]; then
       url="${url//MAJOR/${version[0]}}"
       url="${url//MINOR/${version[1]}}"
@@ -46,7 +46,12 @@ function download_wrapper {
     elif [ "${#version[@]}" -eq 1 ]; then
       url="${url//MAJOR/${version[0]}}"
     fi
-    wget -nc "${url}"
+    if [[ ${url:${#url}-1:1} = "/" ]]; then
+      IFS="."
+      wget -O "${bin}-${version[*]}-${idx}.pdf" -nc "${url}"
+    else
+      wget -nc "${url}"
+    fi
   done
 }
 
