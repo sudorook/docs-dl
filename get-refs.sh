@@ -48,7 +48,7 @@ function download_wrapper {
     fi
     if [[ ${url:${#url}-1:1} = "/" ]]; then
       IFS="."
-      wget -O "${bin}-${version[*]}-${idx}.pdf" -nc "${url}"
+      wget -O "${bin}-${version[*]}-${idx}.pdf" "${url}"
     else
       wget -nc "${url}"
     fi
