@@ -36,9 +36,16 @@ function download_wrapper {
   IFS=' ' read -r -a urls <<< "${URL[${bin}]}"
   for tmp in "${urls[@]}"; do
     url="${tmp}"
-    url="${url//MAJOR/${version[0]}}"
-    url="${url//MINOR/${version[1]}}"
-    [ "${#version[@]}" -eq 3 ] && url="${url//PATCH/${version[2]}}"
+    if [ "${#version[@]}" -eq 3 ]; then
+      url="${url//MAJOR/${version[0]}}"
+      url="${url//MINOR/${version[1]}}"
+      url="${url//PATCH/${version[2]}}"
+    elif [ "${#version[@]}" -eq 2 ]; then
+      url="${url//MAJOR/${version[0]}}"
+      url="${url//MINOR/${version[1]}}"
+    elif [ "${#version[@]}" -eq 1 ]; then
+      url="${url//MAJOR/${version[0]}}"
+    fi
     wget -nc "${url}"
   done
 }
