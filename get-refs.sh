@@ -63,27 +63,8 @@ function download_wrapper {
 if [ "$0" = "${BASH_SOURCE[0]}" ]; then
   mkdir -p "${OUTPUT_DIR}"
   pushd "${OUTPUT_DIR}" >/dev/null
-  download_wrapper "awk"
-  download_wrapper "bash"
-  download_wrapper "bc"
-  download_wrapper "biopython"
-  download_wrapper "ffmpeg"
-  download_wrapper "fish"
-  download_wrapper "gcc"
-  download_wrapper "gimp"
-  download_wrapper "inkscape"
-  download_wrapper "julia"
-  download_wrapper "lua"
-  download_wrapper "matplotlib"
-  download_wrapper "nodejs"
-  download_wrapper "numpy"
-  download_wrapper "octave"
-  download_wrapper "pandas"
-  download_wrapper "python"
-  download_wrapper "r"
-  download_wrapper "sed"
-  download_wrapper "scipy"
-  download_wrapper "sklearn"
-  download_wrapper "zsh"
+  for KEY in "${!URL[@]}"; do
+    download_wrapper "${KEY}"
+  done
   popd >/dev/null
 fi
