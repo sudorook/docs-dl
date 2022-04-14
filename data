@@ -16,6 +16,10 @@ URL["bc"]="https://www.gnu.org/software/bc/manual/html_mono/bc.html"
 CMD["bc"]="bc --version"
 TEST["bc"]=1.07.1
 
+URL["beets"]="https://beets.readthedocs.io/_/downloads/en/vMAJOR.MINOR.PATCH/pdf/"
+CMD["beets"]="python -c 'from beets import __version__ as v; print(v)'"
+TEST["beets"]=1.6.0
+
 URL["biopython"]="https://biopython.org/DIST/docs/tutorial/Tutorial-MAJOR.MINOR.pdf"
 CMD["biopython"]="python -c 'from Bio import __version__ as v; print(v)'"
 TEST["biopython"]=1.79
