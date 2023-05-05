@@ -8,8 +8,8 @@ source data
 OUTPUT_DIR=output
 
 function parse_version {
-  grep "[0-9]\+\(\.[0-9]\+\)\?\(\.[0-9]\+\)\?" | \
-    sed -n "s/^\([^0-9]*\s\?v\?n\?\)\?\([0-9]\+\)\(\.[0-9]\+\)\?\(\.[0-9]\+\)\?.*/\2\3\4/p" | \
+  grep "[0-9]\+\(\.[0-9]\+\)\?\(\.[0-9]\+\)\?" |
+    sed -n "s/^\([^0-9]*\s\?v\?n\?\)\?\([0-9]\+\)\(\.[0-9]\+\)\?\(\.[0-9]\+\)\?.*/\2\3\4/p" |
     head -n 1
 }
 
@@ -27,13 +27,13 @@ function download_wrapper {
   fi
   cmd="${CMD[${bin}]}"
 
-  IFS='.' read -r -a version <<< "$(eval "${cmd}" 2>/dev/null | parse_version)"
+  IFS='.' read -r -a version <<<"$(eval "${cmd}" 2>/dev/null | parse_version)"
   if [ "${#version[@]}" -eq 0 ]; then
     show_warning "${bin@Q} not installed. Skipping."
     return
   fi
 
-  IFS=' ' read -r -a urls <<< "${URL[${bin}]}"
+  IFS=' ' read -r -a urls <<<"${URL[${bin}]}"
   for idx in "${!urls[@]}"; do
     url="${urls[$idx]}"
     if [ "${#version[@]}" -eq 3 ]; then
@@ -54,7 +54,6 @@ function download_wrapper {
     fi
   done
 }
-
 
 #
 # Main

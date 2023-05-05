@@ -3,7 +3,7 @@
 Download the reference documentation and user manuals for installed versions of
 various programs.
 
-```
+```sh
 ./get_refs.sh
 ```
 
