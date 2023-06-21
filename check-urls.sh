@@ -15,7 +15,7 @@ function test_urls {
   local urls
   local tmp
   local key
-  local missing=false
+  local is_missing=false
 
   for key in "${!TEST[@]}"; do
     IFS='.' read -r -a version <<<"${TEST[$key]}"
@@ -36,12 +36,12 @@ function test_urls {
         show_success "${key}: ${url}"
       else
         show_error "${key}: ${url}"
-        missing=true
+        is_missing=true
       fi
     done
   done
 
-  ${missing} && return 1 || return 0
+  ${is_missing} && return 1 || return 0
 }
 
 test_urls
