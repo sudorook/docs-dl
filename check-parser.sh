@@ -24,7 +24,7 @@ function test_parser {
         all_good=false
         show_error "✗ ${key}"
       else
-        show_warning "${key}"
+        show_warning "？${key}"
       fi
     fi
   done
