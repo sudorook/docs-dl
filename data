@@ -97,7 +97,7 @@ URL["parallel"]="https://www.gnu.org/software/parallel/parallel_tutorial.pdf \
 CMD["parallel"]="parallel --version"
 TEST["parallel"]=20220322
 
-URL["python"]="https://docs.python.org/MAJOR/archives/python-MAJOR.MINOR.PATCH-docs-pdf-letter.zip"
+URL["python"]="https://docs.python.org/MAJOR.MINOR/archives/python-MAJOR.MINOR.PATCH-docs-pdf-letter.zip"
 CMD["python"]="python --version"
 TEST["python"]=3.10.3
 
