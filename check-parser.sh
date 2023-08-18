@@ -11,8 +11,8 @@ function test_parser {
   local cmd
 
   for key in "${!CMD[@]}"; do
-    cmd="${CMD[${key}]}"
-    if version="$(eval "${cmd}" 2>/dev/null | parse_version)"; then
+    cmd="${CMD["${key}"]}"
+    if version="$(eval "${cmd}" 2> /dev/null | parse_version)"; then
       if ! [[ "${version}" =~ ^[0-9]+(\.[0-9]+)?(\.[0-9]+)?$ ]]; then
         all_good=false
         show_error "✗ ${key}"
@@ -20,7 +20,7 @@ function test_parser {
         show_success "✓ ${key}"
       fi
     else
-      if command -v "${key%% *}" >/dev/null; then
+      if command -v "${key%% *}" > /dev/null; then
         all_good=false
         show_error "✗ ${key}"
       else

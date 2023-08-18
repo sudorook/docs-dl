@@ -6,7 +6,7 @@ source data
 ! check_command wget grep sed && exit 3
 
 function try_wget {
-  wget -q --tries=5 --timeout=30 --spider "${1}" >/dev/null
+  wget -q --tries=5 --timeout=30 --spider "${1}" > /dev/null
 }
 
 function test_urls {
@@ -18,8 +18,8 @@ function test_urls {
   local is_missing=false
 
   for key in "${!TEST[@]}"; do
-    IFS='.' read -r -a version <<<"${TEST[$key]}"
-    IFS=' ' read -r -a urls <<<"${URL[${key}]}"
+    IFS='.' read -r -a version <<< "${TEST["${key}"]}"
+    IFS=' ' read -r -a urls <<< "${URL["${key}"]}"
     for tmp in "${urls[@]}"; do
       url="${tmp}"
       if [ "${#version[@]}" -eq 3 ]; then

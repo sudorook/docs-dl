@@ -27,15 +27,15 @@ function download_wrapper {
   fi
   cmd="${CMD[${bin}]}"
 
-  IFS='.' read -r -a version <<<"$(eval "${cmd}" 2>/dev/null | parse_version)"
+  IFS='.' read -r -a version <<< "$(eval "${cmd}" 2> /dev/null | parse_version)"
   if [ "${#version[@]}" -eq 0 ]; then
     show_warning "${bin@Q} not installed. Skipping."
     return
   fi
 
-  IFS=' ' read -r -a urls <<<"${URL[${bin}]}"
+  IFS=' ' read -r -a urls <<< "${URL["${bin}"]}"
   for idx in "${!urls[@]}"; do
-    url="${urls[$idx]}"
+    url="${urls["${idx}"]}"
     if [ "${#version[@]}" -eq 3 ]; then
       url="${url//MAJOR/${version[0]}}"
       url="${url//MINOR/${version[1]}}"
@@ -64,9 +64,9 @@ function download_wrapper {
 
 if [ "$0" = "${BASH_SOURCE[0]}" ]; then
   mkdir -p "${OUTPUT_DIR}"
-  pushd "${OUTPUT_DIR}" >/dev/null
+  pushd "${OUTPUT_DIR}" > /dev/null
   for KEY in "${!URL[@]}"; do
     download_wrapper "${KEY}"
   done
-  popd >/dev/null
+  popd > /dev/null
 fi
