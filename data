@@ -78,8 +78,7 @@ URL["nodejs"]="https://nodejs.org/docs/latest-vMAJOR.x/api/all.html"
 CMD["nodejs"]="node --version"
 TEST["nodejs"]=17.8.0
 
-URL["numpy"]="https://numpy.org/doc/MAJOR.MINOR/numpy-ref.pdf \
-              https://numpy.org/doc/MAJOR.MINOR/numpy-user.pdf"
+URL["numpy"]="https://numpy.org/doc/MAJOR.MINOR/numpy-html.zip"
 CMD["numpy"]="python -c 'from numpy import __version__ as v; print(v)'"
 TEST["numpy"]=1.22
 
@@ -87,7 +86,7 @@ URL["octave"]="https://octave.org/doc/octave-MAJOR.MINOR.PATCH.pdf"
 CMD["octave"]="octave --version"
 TEST["octave"]=6.4.0
 
-URL["pandas"]="https://pandas.pydata.org/pandas-docs/version/MAJOR.MINOR.PATCH/pandas.pdf"
+URL["pandas"]="https://pandas.pydata.org/pandas-docs/version/MAJOR.MINOR.PATCH/pandas.zip"
 CMD["pandas"]="python -c 'from pandas import __version__ as v; print(v)'"
 TEST["pandas"]=1.4.1
 
@@ -101,11 +100,15 @@ URL["python"]="https://docs.python.org/MAJOR.MINOR/archives/python-MAJOR.MINOR.P
 CMD["python"]="python --version"
 TEST["python"]=3.10.3
 
+URL["rust"]=""
+CMD["rust"]="rustc --version"
+TEST["rust"]=1.61.0
+
 URL["r"]="https://cran.r-project.org/doc/manuals/r-release/fullrefman.pdf"
 CMD["r"]="R --version"
 TEST["r"]=4.0.5
 
-URL["scipy"]="https://docs.scipy.org/doc/scipy-MAJOR.MINOR.PATCH/scipy-ref-MAJOR.MINOR.PATCH.pdf"
+URL["scipy"]="https://docs.scipy.org/doc/scipy-MAJOR.MINOR.PATCH/scipy-html-MAJOR.MINOR.PATCH.zip"
 CMD["scipy"]="python -c 'from scipy import __version__ as v; print(v)'"
 TEST["scipy"]=1.8.0
 
