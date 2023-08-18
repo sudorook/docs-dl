@@ -58,9 +58,17 @@ URL["gimp"]="https://download.gimp.org/pub/gimp/help/gimp-help-MAJOR.MINOR.0.tar
 CMD["gimp"]="gimp --version"
 TEST["gimp"]=2.10.30
 
+URL["graphviz"]=""
+CMD["graphviz"]="dot -V"
+TEST["graphviz"]=3.0.0
+
 URL["inkscape"]="https://inkscape-manuals.readthedocs.io/_/downloads/en/latest/pdf/"
 CMD["inkscape"]="inkscape --version"
 TEST["inkscape"]=1.1.2
+
+URL["gitpython"]="https://gitpython.readthedocs.io/_/downloads/en/MAJOR.MINOR.PATCH/pdf/"
+CMD["gitpython"]="python -c 'from git import __version__ as v; print(v)'"
+TEST["gitpython"]=3.1.32
 
 URL["julia"]="https://raw.githubusercontent.com/JuliaLang/docs.julialang.org/assets/julia-MAJOR.MINOR.PATCH.pdf"
 CMD["julia"]="julia --version"
