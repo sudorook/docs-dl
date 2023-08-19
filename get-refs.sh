@@ -62,11 +62,21 @@ function download_wrapper {
 # Main
 #
 
-if [ "$0" = "${BASH_SOURCE[0]}" ]; then
+if [ "${0}" = "${BASH_SOURCE[0]}" ]; then
   mkdir -p "${OUTPUT_DIR}"
   pushd "${OUTPUT_DIR}" > /dev/null
-  for KEY in "${!URL[@]}"; do
-    download_wrapper "${KEY}"
-  done
+  if [ "${#}" -eq 0 ]; then
+    for KEY in "${!URL[@]}"; do
+      download_wrapper "${KEY}"
+    done
+  else
+    for KEY in "${@}"; do
+      if [ -n "${URL[${KEY}]-}" ]; then
+        download_wrapper "${KEY}"
+      else
+        show_error "ERROR: ${KEY@Q} not found."
+      fi
+    done
+  fi
   popd > /dev/null
 fi
