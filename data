@@ -32,6 +32,10 @@ URL["biopython"]="https://biopython.org/DIST/docs/tutorial/Tutorial-MAJOR.MINOR.
 CMD["biopython"]="python -c 'from Bio import __version__ as v; print(v)'"
 TEST["biopython"]=1.79
 
+URL["black"]="https://black.readthedocs.io/_/downloads/en/latest/htmlzip/"
+CMD["black"]="python -c 'from black import __version__ as v; print(v)'"
+TEST["black"]=23.7.0
+
 URL["coreutils"]="https://www.gnu.org/software/coreutils/manual/coreutils.pdf"
 CMD["coreutils"]="ls --version"
 TEST["coreutils"]=9.0
