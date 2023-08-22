@@ -51,7 +51,11 @@ function download_wrapper {
     fi
     if [[ ${url:${#url}-1:1} = "/" ]]; then
       IFS="."
-      wget --quiet --show-progress -O "${bin}-${version[*]}-${idx}.pdf" "${url}"
+      if [[ "${url:${#url}-4:4}" = "pdf/" ]]; then
+        wget --quiet --show-progress -O "${bin}-${version[*]}-${idx}.pdf" "${url}"
+      elif [[ "${url:${#url}-8:8}" = "htmlzip/" ]]; then
+        wget --quiet --show-progress -O "${bin}-${version[*]}-${idx}.zip" "${url}"
+      fi
     else
       wget --quiet --show-progress -nc "${url}"
     fi
