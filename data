@@ -16,13 +16,13 @@ URL["bash"]="https://www.gnu.org/software/bash/manual/bash.pdf"
 CMD["bash"]="bash --version"
 TEST["bash"]=5.1.16
 
-URL["beautifulsoup"]="https://beautiful-soup-4.readthedocs.io/_/downloads/en/latest/pdf/"
-CMD["beautifulsoup"]="python -c 'from bs4 import __version__ as v; print(v)'"
-TEST["beautifulsoup"]=4.12.2
-
 URL["bc"]="https://www.gnu.org/software/bc/manual/html_mono/bc.html"
 CMD["bc"]="bc --version"
 TEST["bc"]=1.07.1
+
+URL["beautifulsoup"]="https://beautiful-soup-4.readthedocs.io/_/downloads/en/latest/pdf/"
+CMD["beautifulsoup"]="python -c 'from bs4 import __version__ as v; print(v)'"
+TEST["beautifulsoup"]=4.12.2
 
 URL["beets"]="https://beets.readthedocs.io/_/downloads/en/vMAJOR.MINOR.PATCH/pdf/"
 CMD["beets"]="python -c 'from beets import __version__ as v; print(v)'"
