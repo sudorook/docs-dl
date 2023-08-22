@@ -17,6 +17,7 @@ function download_wrapper {
   local bin="${1}"
   local cmd
   local version
+  local _version
   local url
   local urls
   local idx
@@ -37,24 +38,36 @@ function download_wrapper {
   for idx in "${!urls[@]}"; do
     url="${urls["${idx}"]}"
     if [ "${#version[@]}" -eq 3 ]; then
+      _version="${version[0]}.${version[1]}.${version[2]}"
       url="${url//MAJOR/${version[0]}}"
       url="${url//MINOR/${version[1]}}"
       url="${url//PATCH/${version[2]}}"
     elif [ "${#version[@]}" -eq 2 ]; then
+      _version="${version[0]}.${version[1]}}"
       url="${url//MAJOR/${version[0]}}"
       url="${url//MINOR/${version[1]}}"
       url="${url//.PATCH/}"
     elif [ "${#version[@]}" -eq 1 ]; then
+      _version="${version[0]}}"
       url="${url//MAJOR/${version[0]}}"
       url="${url//.MINOR/}"
       url="${url//.PATCH/}"
     fi
+    if ! [[ "${url}" =~ ${_version} ]]; then
+      if [[ "${url}" =~ /latest/ ]]; then
+        _version="latest"
+      elif [[ "${url}" =~ /stable/ ]]; then
+        _version="stable"
+      else
+        _version="unknown"
+      fi
+    fi
     if [[ ${url:${#url}-1:1} = "/" ]]; then
       IFS="."
       if [[ "${url:${#url}-4:4}" = "pdf/" ]]; then
-        wget --quiet --show-progress -O "${bin}-${version[*]}-${idx}.pdf" "${url}"
+        wget --quiet --show-progress -O "${bin}-${_version[*]}-${idx}.pdf" "${url}"
       elif [[ "${url:${#url}-8:8}" = "htmlzip/" ]]; then
-        wget --quiet --show-progress -O "${bin}-${version[*]}-${idx}.zip" "${url}"
+        wget --quiet --show-progress -O "${bin}-${_version[*]}-${idx}.zip" "${url}"
       fi
     else
       wget --quiet --show-progress -nc "${url}"
