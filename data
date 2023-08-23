@@ -8,7 +8,7 @@ URL["ape"]="https://cran.r-project.org/web/packages/ape/ape.pdf \
             https://cran.r-project.org/web/packages/ape/vignettes/DrawingPhylogenies.pdf \
             https://cran.r-project.org/web/packages/ape/vignettes/MoranI.pdf \
             https://cran.r-project.org/web/packages/ape/vignettes/RandomTopologies.pdf"
-CMD["ape"]="Rscript -e 'packageVersion(\"ape\")'"
+CMD["ape"]="Rscript -e 'if (system.file(package=\"ape\") != \"\") {v <- packageVersion(\"ape\"); cat(toString(v))}'"
 TEST["ape"]=5.7.1
 
 URL["armadillo"]="http://arma.sourceforge.net/docs.html"
@@ -16,7 +16,7 @@ CMD["armadillo"]="pkg-config --modversion armadillo"
 TEST["armadillo"]=11.0.0
 
 URL["assertthat"]="https://cran.r-project.org/web/packages/assertthat/assertthat.pdf"
-CMD["assertthat"]="Rscript -e 'packageVersion(\"assertthat\")'"
+CMD["assertthat"]="Rscript -e 'if (system.file(package=\"assertthat\") != \"\") {v <- packageVersion(\"assertthat\"); cat(toString(v))}'"
 TEST["assertthat"]=0.2.1
 
 URL["awk"]="https://www.gnu.org/software/gawk/manual/gawk.pdf"
@@ -44,7 +44,7 @@ CMD["biopython"]="python -c 'from Bio import __version__ as v; print(v)'"
 TEST["biopython"]=1.79
 
 URL["bipartite"]="https://cran.r-project.org/web/packages/bipartite/bipartite.pdf"
-CMD["bipartite"]="Rscript -e 'packageVersion(\"bipartite\")'"
+CMD["bipartite"]="Rscript -e 'if (system.file(package=\"bipartite\") != \"\") {v <- packageVersion(\"bipartite\"); cat(toString(v))}'"
 TEST["bipartite"]=2.18
 
 URL["black"]="https://black.readthedocs.io/_/downloads/en/latest/htmlzip/"
@@ -58,7 +58,7 @@ TEST["coreutils"]=9.0
 URL["curl"]="https://cran.r-project.org/web/packages/curl/curl.pdf \
              https://cran.r-project.org/web/packages/curl/vignettes/intro.html \
              https://cran.r-project.org/web/packages/curl/vignettes/windows.html"
-CMD["curl"]="Rscript -e 'packageVersion(\"curl\")'"
+CMD["curl"]="Rscript -e 'if (system.file(package=\"curl\") != \"\") {v <- packageVersion(\"curl\"); cat(toString(v))}'"
 TEST["curl"]=5.0.2
 
 URL["data.table"]="https://cran.r-project.org/web/packages/data.table/data.table.pdf \
@@ -72,12 +72,12 @@ URL["data.table"]="https://cran.r-project.org/web/packages/data.table/data.table
                    https://cran.r-project.org/web/packages/data.table/vignettes/datatable-sd-usage.html \
                    https://cran.r-project.org/web/packages/data.table/vignettes/datatable-secondary-indices-and-auto-indexing.html \
                    https://raw.githubusercontent.com/rstudio/cheatsheets/master/datatable.pdf"
-CMD["data.table"]="Rscript -e 'packageVersion(\"data.table\")'"
+CMD["data.table"]="Rscript -e 'if (system.file(package=\"data.table\") != \"\") {v <- packageVersion(\"data.table\"); cat(toString(v))}'"
 TEST["data.table"]=1.14.8
 
 URL["devtools"]="https://cran.r-project.org/web/packages/devtools/devtools.pdf \
                  https://cran.r-project.org/web/packages/devtools/vignettes/dependencies.html"
-CMD["devtools"]="Rscript -e 'packageVersion(\"devtools\")'"
+CMD["devtools"]="Rscript -e 'if (system.file(package=\"devtools\") != \"\") {v <- packageVersion(\"devtools\"); cat(toString(v))}'"
 TEST["devtools"]=2.4.5
 
 URL["dplyr"]="https://cran.r-project.org/web/packages/dplyr/dplyr.pdf \
@@ -91,7 +91,7 @@ URL["dplyr"]="https://cran.r-project.org/web/packages/dplyr/dplyr.pdf \
               https://cran.r-project.org/web/packages/dplyr/vignettes/two-table.html \
               https://cran.r-project.org/web/packages/dplyr/vignettes/window-functions.html \
               https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-transformation.pdf"
-CMD["dplyr"]="Rscript -e 'packageVersion(\"dplyr\")'"
+CMD["dplyr"]="Rscript -e 'if (system.file(package=\"dplyr\") != \"\") {v <- packageVersion(\"dplyr\"); cat(toString(v))}'"
 TEST["dplyr"]=1.1.2
 
 URL["eigen"]="https://eigen.tuxfamily.org/dox/eigen-doc.tgz"
@@ -100,7 +100,7 @@ TEST["eigen"]=3.4.0
 
 URL["expm"]="https://cran.r-project.org/web/packages/expm/expm.pdf \
              https://cran.r-project.org/web/packages/expm/vignettes/expm.pdf"
-CMD["expm"]="Rscript -e 'packageVersion(\"expm\")'"
+CMD["expm"]="Rscript -e 'if (system.file(package=\"expm\") != \"\") {v <- packageVersion(\"expm\"); cat(toString(v))}'"
 TEST["expm"]=0.999.7
 
 URL["ffmpeg"]="https://ffmpeg.org/ffmpeg-all.html"
@@ -126,7 +126,7 @@ URL["ggplot"]="https://cran.r-project.org/web/packages/ggplot2/ggplot2.pdf \
                https://cran.r-project.org/web/packages/ggplot2/vignettes/ggplot2-in-packages.html \
                https://cran.r-project.org/web/packages/ggplot2/vignettes/ggplot2-specs.html \
                https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-visualization.pdf"
-CMD["ggplot"]="Rscript -e 'packageVersion(\"ggplot2\")'"
+CMD["ggplot"]="Rscript -e 'if (system.file(package=\"ggplot2\") != \"\") {v <- packageVersion(\"ggplot2\"); cat(toString(v))}'"
 TEST["ggplot"]=3.4.3
 
 URL["gimp"]="https://download.gimp.org/pub/gimp/help/gimp-help-MAJOR.MINOR.0.tar.bz2"
@@ -138,7 +138,7 @@ URL["glmnet"]="https://cran.r-project.org/web/packages/glmnet/glmnet.pdf \
                https://cran.r-project.org/web/packages/glmnet/vignettes/glmnet.pdf \
                https://cran.r-project.org/web/packages/glmnet/vignettes/glmnetFamily.pdf \
                https://cran.r-project.org/web/packages/glmnet/vignettes/relax.pdf"
-CMD["glmnet"]="Rscript -e 'packageVersion(\"glmnet\")'"
+CMD["glmnet"]="Rscript -e 'if (system.file(package=\"glmnet\") != \"\") {v <- packageVersion(\"glmnet\"); cat(toString(v))}'"
 TEST["glmnet"]=4.1.8
 
 URL["graphviz"]=""
@@ -147,7 +147,7 @@ TEST["graphviz"]=3.0.0
 
 URL["igraph"]="https://cran.r-project.org/web/packages/igraph/igraph.pdf \
                https://cran.r-project.org/web/packages/igraph/vignettes/igraph.html"
-CMD["igraph"]="Rscript -e 'packageVersion(\"igraph\")'"
+CMD["igraph"]="Rscript -e 'if (system.file(package=\"igraph\") != \"\") {v <- packageVersion(\"igraph\"); cat(toString(v))}'"
 TEST["igraph"]=1.5.1
 
 URL["inkscape"]="https://inkscape-manuals.readthedocs.io/_/downloads/en/latest/pdf/"
@@ -156,7 +156,7 @@ TEST["inkscape"]=1.1.2
 
 URL["interplot"]="https://cran.r-project.org/web/packages/interplot/interplot.pdf \
                   https://cran.r-project.org/web/packages/interplot/vignettes/interplot-vignette.html"
-CMD["interplot"]="Rscript -e 'packageVersion(\"interplot\")'"
+CMD["interplot"]="Rscript -e 'if (system.file(package=\"interplot\") != \"\") {v <- packageVersion(\"interplot\"); cat(toString(v))}'"
 TEST["interplot"]=0.2.3
 
 URL["gitpython"]="https://gitpython.readthedocs.io/_/downloads/en/MAJOR.MINOR.PATCH/pdf/"
@@ -176,13 +176,13 @@ URL["knitr"]="https://cran.r-project.org/web/packages/knitr/knitr.pdf \
               https://cran.r-project.org/web/packages/knitr/vignettes/docco-linear.html \
               https://cran.r-project.org/web/packages/knitr/vignettes/knit_print.html \
               https://cran.r-project.org/web/packages/knitr/vignettes/knitr-intro.html"
-CMD["knitr"]="Rscript -e 'packageVersion(\"knitr\")'"
+CMD["knitr"]="Rscript -e 'if (system.file(package=\"knitr\") != \"\") {v <- packageVersion(\"knitr\"); cat(toString(v))}'"
 TEST["knitr"]=1.43
 
 URL["latex2exp"]="https://cran.r-project.org/web/packages/latex2exp/latex2exp.pdf \
                   https://cran.r-project.org/web/packages/latex2exp/vignettes/supported-commands.html \
                   https://cran.r-project.org/web/packages/latex2exp/vignettes/using-latex2exp.html"
-CMD["latex2exp"]="Rscript -e 'packageVersion(\"latex2exp\")'"
+CMD["latex2exp"]="Rscript -e 'if (system.file(package=\"latex2exp\") != \"\") {v <- packageVersion(\"latex2exp\"); cat(toString(v))}'"
 TEST["latex2exp"]=0.9.6
 
 URL["lua"]="https://www.lua.org/ftp/refman-MAJOR.MINOR.tar.gz"
@@ -191,7 +191,7 @@ TEST["lua"]=5.4
 
 URL["lubridate"]="https://cran.r-project.org/web/packages/lubridate/lubridate.pdf \
                   https://cran.r-project.org/web/packages/lubridate/vignettes/lubridate.html"
-CMD["lubridate"]="Rscript -e 'packageVersion(\"lubridate\")'"
+CMD["lubridate"]="Rscript -e 'if (system.file(package=\"lubridate\") != \"\") {v <- packageVersion(\"lubridate\"); cat(toString(v))}'"
 TEST["lubridate"]=1.9.2
 
 URL["magic"]="https://magic.readthedocs.io/_/downloads/en/stable/pdf/"
@@ -201,11 +201,11 @@ TEST["magic"]=0.4.27
 URL["magrittr"]="https://cran.r-project.org/web/packages/magrittr/magrittr.pdf \
                  https://cran.r-project.org/web/packages/magrittr/vignettes/magrittr.html \
                  https://cran.r-project.org/web/packages/magrittr/vignettes/tradeoffs.html"
-CMD["magrittr"]="Rscript -e 'packageVersion(\"magrittr\")'"
+CMD["magrittr"]="Rscript -e 'if (system.file(package=\"magrittr\") != \"\") {v <- packageVersion(\"magrittr\"); cat(toString(v))}'"
 TEST["magrittr"]=2.0.3
 
 URL["MASS"]="https://cran.r-project.org/web/packages/MASS/MASS.pdf"
-CMD["MASS"]="Rscript -e 'packageVersion(\"MASS\")'"
+CMD["MASS"]="Rscript -e 'if (system.file(package=\"MASS\") != \"\") {v <- packageVersion(\"MASS\"); cat(toString(v))}'"
 TEST["MASS"]=7.3.60
 
 URL["matplotlib"]="https://matplotlib.org/MAJOR.MINOR.PATCH/Matplotlib.pdf"
@@ -219,7 +219,7 @@ TEST["mpi4py"]=3.1.4
 URL["mvtnorm"]="https://cran.r-project.org/web/packages/mvtnorm/mvtnorm.pdf \
                 https://cran.r-project.org/web/packages/mvtnorm/vignettes/MVT_Rnews.pdf \
                 https://cran.r-project.org/web/packages/mvtnorm/vignettes/lmvnorm_src.pdf"
-CMD["mvtnorm"]="Rscript -e 'packageVersion(\"mvtnorm\")'"
+CMD["mvtnorm"]="Rscript -e 'if (system.file(package=\"mvtnorm\") != \"\") {v <- packageVersion(\"mvtnorm\"); cat(toString(v))}'"
 TEST["mvtnorm"]=1.2.2
 
 URL["nodejs"]="https://nodejs.org/docs/latest-vMAJOR.x/api/all.html"
@@ -236,7 +236,7 @@ TEST["octave"]=6.4.0
 
 URL["optparse"]="https://cran.r-project.org/web/packages/optparse/optparse.pdf \
                  https://cran.r-project.org/web/packages/optparse/vignettes/optparse.html"
-CMD["optparse"]="Rscript -e 'packageVersion(\"optparse\")'"
+CMD["optparse"]="Rscript -e 'if (system.file(package=\"optparse\") != \"\") {v <- packageVersion(\"optparse\"); cat(toString(v))}'"
 TEST["optparse"]=1.7.3
 
 URL["pandas"]="https://pandas.pydata.org/pandas-docs/version/MAJOR.MINOR.PATCH/pandas.zip"
@@ -245,7 +245,7 @@ TEST["pandas"]=1.4.1
 
 URL["patchwork"]="https://cran.r-project.org/web/packages/patchwork/patchwork.pdf \
                   https://cran.r-project.org/web/packages/patchwork/vignettes/patchwork.html"
-CMD["patchwork"]="Rscript -e 'packageVersion(\"patchwork\")'"
+CMD["patchwork"]="Rscript -e 'if (system.file(package=\"patchwork\") != \"\") {v <- packageVersion(\"patchwork\"); cat(toString(v))}'"
 TEST["patchwork"]=1.1.3
 
 URL["parallel"]="https://www.gnu.org/software/parallel/parallel_tutorial.pdf \
@@ -261,7 +261,7 @@ TEST["pillow"]=10.0.0
 URL["purrr"]="https://cran.r-project.org/web/packages/purrr/purrr.pdf \
               https://cran.r-project.org/web/packages/purrr/vignettes/base.html \
               https://cran.r-project.org/web/packages/purrr/vignettes/other-langs.html"
-CMD["purrr"]="Rscript -e 'packageVersion(\"purrr\")'"
+CMD["purrr"]="Rscript -e 'if (system.file(package=\"purrr\") != \"\") {v <- packageVersion(\"purrr\"); cat(toString(v))}'"
 TEST["purrr"]=1.0.2
 
 URL["python"]="https://docs.python.org/MAJOR.MINOR/archives/python-MAJOR.MINOR.PATCH-docs-pdf-letter.zip"
@@ -269,7 +269,7 @@ CMD["python"]="python --version"
 TEST["python"]=3.10.3
 
 URL["quadprog"]="https://cran.r-project.org/web/packages/quadprog/quadprog.pdf"
-CMD["quadprog"]="Rscript -e 'packageVersion(\"quadprog\")'"
+CMD["quadprog"]="Rscript -e 'if (system.file(package=\"quadprog\") != \"\") {v <- packageVersion(\"quadprog\"); cat(toString(v))}'"
 TEST["quadprog"]=1.5.8
 
 URL["r"]="https://cran.r-project.org/doc/manuals/r-release/fullrefman.pdf"
@@ -277,7 +277,7 @@ CMD["r"]="R --version"
 TEST["r"]=4.0.5
 
 URL["rcolorbrewer"]="https://cran.r-project.org/web/packages/RColorBrewer/RColorBrewer.pdf"
-CMD["rcolorbrewer"]="Rscript -e 'packageVersion(\"rcolorbrewer\")'"
+CMD["rcolorbrewer"]="Rscript -e 'if (system.file(package=\"rcolorbrewer\") != \"\") {v <- packageVersion(\"rcolorbrewer\"); cat(toString(v))}'"
 TEST["rcolorbrewer"]=1.1.3
 
 URL["rcpp"]="https://cran.r-project.org/web/packages/Rcpp/Rcpp.pdf \
@@ -291,39 +291,39 @@ URL["rcpp"]="https://cran.r-project.org/web/packages/Rcpp/Rcpp.pdf \
              https://cran.r-project.org/web/packages/Rcpp/vignettes/Rcpp-package.pdf \
              https://cran.r-project.org/web/packages/Rcpp/vignettes/Rcpp-quickref.pdf \
              https://cran.r-project.org/web/packages/Rcpp/vignettes/Rcpp-sugar.pdf"
-CMD["rcpp"]="Rscript -e 'packageVersion(\"rcpp\")'"
+CMD["rcpp"]="Rscript -e 'if (system.file(package=\"rcpp\") != \"\") {v <- packageVersion(\"rcpp\"); cat(toString(v))}'"
 TEST["rcpp"]=1.0.11
 
 URL["rcpparmadillo"]="https://cran.r-project.org/web/packages/RcppArmadillo/RcppArmadillo.pdf \
                       https://cran.r-project.org/web/packages/RcppArmadillo/vignettes/RcppArmadillo-intro.pdf \
                       https://cran.r-project.org/web/packages/RcppArmadillo/vignettes/RcppArmadillo-sparseMatrix.pdf"
-CMD["rcpparmadillo"]="Rscript -e 'packageVersion(\"rcpparmadillo\")'"
+CMD["rcpparmadillo"]="Rscript -e 'if (system.file(package=\"rcpparmadillo\") != \"\") {v <- packageVersion(\"rcpparmadillo\"); cat(toString(v))}'"
 TEST["rcpparmadillo"]=0.12.6.1.0
 
 URL["rcppeigen"]="https://cran.r-project.org/web/packages/RcppEigen/RcppEigen.pdf \
                   https://cran.r-project.org/web/packages/RcppEigen/vignettes/RcppEigen-Introduction.pdf"
-CMD["rcppeigen"]="Rscript -e 'packageVersion(\"rcppeigen\")'"
+CMD["rcppeigen"]="Rscript -e 'if (system.file(package=\"rcppeigen\") != \"\") {v <- packageVersion(\"rcppeigen\"); cat(toString(v))}'"
 TEST["rcppeigen"]=0.3.3.9.3
 
 URL["readr"]="https://cran.r-project.org/web/packages/readr/readr.pdf \
               https://cran.r-project.org/web/packages/readr/vignettes/column-types.html \
               https://cran.r-project.org/web/packages/readr/vignettes/locales.html \
               https://cran.r-project.org/web/packages/readr/vignettes/readr.html"
-CMD["readr"]="Rscript -e 'packageVersion(\"readr\")'"
+CMD["readr"]="Rscript -e 'if (system.file(package=\"readr\") != \"\") {v <- packageVersion(\"readr\"); cat(toString(v))}'"
 TEST["readr"]=2.1.4
 
 URL["reshape2"]="https://cran.r-project.org/web/packages/reshape2/reshape2.pdf"
-CMD["reshape2"]="Rscript -e 'packageVersion(\"reshape2\")'"
+CMD["reshape2"]="Rscript -e 'if (system.file(package=\"reshape2\") != \"\") {v <- packageVersion(\"reshape2\"); cat(toString(v))}'"
 TEST["reshape2"]=1.4.4
 
 URL["rmarkdown"]="https://cran.r-project.org/web/packages/rmarkdown/rmarkdown.pdf"
-CMD["rmarkdown"]="Rscript -e 'packageVersion(\"rmarkdown\")'"
+CMD["rmarkdown"]="Rscript -e 'if (system.file(package=\"rmarkdown\") != \"\") {v <- packageVersion(\"rmarkdown\"); cat(toString(v))}'"
 TEST["rmarkdown"]=2.24
 
 URL["rvest"]="https://cran.r-project.org/web/packages/rvest/rvest.pdf \
               https://cran.r-project.org/web/packages/rvest/vignettes/rvest.html \
               https://cran.r-project.org/web/packages/rvest/vignettes/starwars.html"
-CMD["rvest"]="Rscript -e 'packageVersion(\"rvest\")'"
+CMD["rvest"]="Rscript -e 'if (system.file(package=\"rvest\") != \"\") {v <- packageVersion(\"rvest\"); cat(toString(v))}'"
 TEST["rvest"]=1.0.3
 
 URL["scipy"]="https://docs.scipy.org/doc/scipy-MAJOR.MINOR.PATCH/scipy-html-MAJOR.MINOR.PATCH.zip"
@@ -350,23 +350,23 @@ URL["stringr"]="https://cran.r-project.org/web/packages/stringr/stringr.pdf \
                 https://cran.r-project.org/web/packages/stringr/vignettes/from-base.html \
                 https://cran.r-project.org/web/packages/stringr/vignettes/regular-expressions.html \
                 https://cran.r-project.org/web/packages/stringr/vignettes/stringr.html"
-CMD["stringr"]="Rscript -e 'packageVersion(\"stringr\")'"
+CMD["stringr"]="Rscript -e 'if (system.file(package=\"stringr\") != \"\") {v <- packageVersion(\"stringr\"); cat(toString(v))}'"
 TEST["stringr"]=1.5.0
 
 URL["testthat"]="https://cran.r-project.org/web/packages/testthat/testthat.pdf"
-CMD["testthat"]="Rscript -e 'packageVersion(\"testthat\")'"
+CMD["testthat"]="Rscript -e 'if (system.file(package=\"testthat\") != \"\") {v <- packageVersion(\"testthat\"); cat(toString(v))}'"
 TEST["testthat"]=3.1.10
 
 URL["tibble"]="https://cran.r-project.org/web/packages/tibble/tibble.pdf"
-CMD["tibble"]="Rscript -e 'packageVersion(\"tibble\")'"
+CMD["tibble"]="Rscript -e 'if (system.file(package=\"tibble\") != \"\") {v <- packageVersion(\"tibble\"); cat(toString(v))}'"
 TEST["tibble"]=3.2.1
 
 URL["tidyr"]="https://cran.r-project.org/web/packages/tidyr/tidyr.pdf"
-CMD["tidyr"]="Rscript -e 'packageVersion(\"tidyr\")'"
+CMD["tidyr"]="Rscript -e 'if (system.file(package=\"tidyr\") != \"\") {v <- packageVersion(\"tidyr\"); cat(toString(v))}'"
 TEST["tidyr"]=1.3.0
 
 URL["tidyverse"]="https://cran.r-project.org/web/packages/tidyverse/tidyverse.pdf"
-CMD["tidyverse"]="Rscript -e 'packageVersion(\"tidyverse\")'"
+CMD["tidyverse"]="Rscript -e 'if (system.file(package=\"tidyverse\") != \"\") {v <- packageVersion(\"tidyverse\"); cat(toString(v))}'"
 TEST["tidyverse"]=2.0.0
 
 URL["vegan"]="https://cran.r-project.org/web/packages/vegan/vegan.pdf \
@@ -375,7 +375,7 @@ URL["vegan"]="https://cran.r-project.org/web/packages/vegan/vegan.pdf \
               https://cran.r-project.org/web/packages/vegan/vignettes/intro-vegan.pdf \
               https://cran.r-project.org/web/packages/vegan/vignettes/partitioning.pdf \
               https://cran.r-project.org/web/packages/vegan/vignettes/FAQ-vegan.html"
-CMD["vegan"]="Rscript -e 'packageVersion(\"vegan\")'"
+CMD["vegan"]="Rscript -e 'if (system.file(package=\"vegan\") != \"\") {v <- packageVersion(\"vegan\"); cat(toString(v))}'"
 TEST["vegan"]=2.6.4
 
 URL["wget"]="https://www.gnu.org/software/wget/manual/wget.pdf"
