@@ -86,9 +86,17 @@ URL["lua"]="https://www.lua.org/ftp/refman-MAJOR.MINOR.tar.gz"
 CMD["lua"]="lua -v"
 TEST["lua"]=5.4
 
+# URL["magic"]="https://magic.readthedocs.io/_/downloads/en/stable/pdf/"
+# CMD["magic"]="python -c 'import magic; print(magic.version())'"
+# TEST["magic"]=0.4.27
+
 URL["matplotlib"]="https://matplotlib.org/MAJOR.MINOR.PATCH/Matplotlib.pdf"
 CMD["matplotlib"]="python -c 'from matplotlib import __version__ as v; print(v)'"
 TEST["matplotlib"]=3.5.1
+
+URL["mpi4py"]="https://mpi4py.readthedocs.io/_/downloads/en/MAJOR.MINOR.PATCH/pdf/"
+CMD["mpi4py"]="python -c 'from mpi4py import __version__ as v; print(v)'"
+TEST["mpi4py"]=3.1.4
 
 URL["nodejs"]="https://nodejs.org/docs/latest-vMAJOR.x/api/all.html"
 CMD["nodejs"]="node --version"
@@ -112,6 +120,10 @@ URL["parallel"]="https://www.gnu.org/software/parallel/parallel_tutorial.pdf \
 CMD["parallel"]="parallel --version"
 TEST["parallel"]=20220322
 
+URL["pillow"]="https://pillow.readthedocs.io/_/downloads/en/stable/pdf/"
+CMD["pillow"]="python -c 'from PIL import __version__ as v; print(v)'"
+TEST["pillow"]=10.0.0
+
 URL["python"]="https://docs.python.org/MAJOR.MINOR/archives/python-MAJOR.MINOR.PATCH-docs-pdf-letter.zip"
 CMD["python"]="python --version"
 TEST["python"]=3.10.3
@@ -128,9 +140,17 @@ URL["scipy"]="https://docs.scipy.org/doc/scipy-MAJOR.MINOR.PATCH/scipy-html-MAJO
 CMD["scipy"]="python -c 'from scipy import __version__ as v; print(v)'"
 TEST["scipy"]=1.8.0
 
+URL["seaborn"]="https://github.com/seaborn/seaborn.github.io/archive/refs/tags/vMAJOR.MINOR.PATCH.zip"
+CMD["seaborn"]="python -c 'from seaborn import __version__ as v; print(v)'"
+TEST["seaborn"]=0.12.1
+
 URL["sed"]="https://www.gnu.org/software/sed/manual/sed.pdf"
 CMD["sed"]="sed --version"
 TEST["sed"]=4.8
+
+URL["scrapy"]="https://docs.scrapy.org/_/downloads/en/MAJOR.MINOR/pdf/"
+CMD["scrapy"]="python -c 'from scrapy import __version__ as v; print(v)'"
+TEST["scrapy"]=2.8
 
 URL["sklearn"]="https://scikit-learn.org/MAJOR.MINOR/_downloads/scikit-learn-docs.zip"
 CMD["sklearn"]="python -c 'from sklearn import __version__ as v; print(v)'"
