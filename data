@@ -141,10 +141,6 @@ URL["glmnet"]="https://cran.r-project.org/web/packages/glmnet/glmnet.pdf \
 CMD["glmnet"]="Rscript -e 'if (system.file(package=\"glmnet\") != \"\") {v <- packageVersion(\"glmnet\"); cat(toString(v))}'"
 TEST["glmnet"]=4.1.8
 
-URL["graphviz"]=""
-CMD["graphviz"]="dot -V"
-TEST["graphviz"]=3.0.0
-
 URL["igraph"]="https://cran.r-project.org/web/packages/igraph/igraph.pdf \
                https://cran.r-project.org/web/packages/igraph/vignettes/igraph.html"
 CMD["igraph"]="Rscript -e 'if (system.file(package=\"igraph\") != \"\") {v <- packageVersion(\"igraph\"); cat(toString(v))}'"
@@ -272,9 +268,9 @@ URL["quadprog"]="https://cran.r-project.org/web/packages/quadprog/quadprog.pdf"
 CMD["quadprog"]="Rscript -e 'if (system.file(package=\"quadprog\") != \"\") {v <- packageVersion(\"quadprog\"); cat(toString(v))}'"
 TEST["quadprog"]=1.5.8
 
-URL["r"]="https://cran.r-project.org/doc/manuals/r-release/fullrefman.pdf"
-CMD["r"]="R --version"
-TEST["r"]=4.0.5
+URL["R"]="https://cran.r-project.org/doc/manuals/r-release/fullrefman.pdf"
+CMD["R"]="R --version"
+TEST["R"]=4.0.5
 
 URL["RColorBrewer"]="https://cran.r-project.org/web/packages/RColorBrewer/RColorBrewer.pdf"
 CMD["RColorBrewer"]="Rscript -e 'if (system.file(package=\"RColorBrewer\") != \"\") {v <- packageVersion(\"RColorBrewer\"); cat(toString(v))}'"
