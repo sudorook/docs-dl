@@ -194,6 +194,10 @@ URL["lubridate"]="https://cran.r-project.org/web/packages/lubridate/lubridate.pd
 CMD["lubridate"]="Rscript -e 'packageVersion(\"lubridate\")'"
 TEST["lubridate"]=1.9.2
 
+URL["magic"]="https://magic.readthedocs.io/_/downloads/en/stable/pdf/"
+CMD["magic"]="python -c 'import magic; print(magic.version())'"
+TEST["magic"]=0.4.27
+
 URL["magrittr"]="https://cran.r-project.org/web/packages/magrittr/magrittr.pdf \
                  https://cran.r-project.org/web/packages/magrittr/vignettes/magrittr.html \
                  https://cran.r-project.org/web/packages/magrittr/vignettes/tradeoffs.html"
