@@ -276,11 +276,11 @@ URL["r"]="https://cran.r-project.org/doc/manuals/r-release/fullrefman.pdf"
 CMD["r"]="R --version"
 TEST["r"]=4.0.5
 
-URL["rcolorbrewer"]="https://cran.r-project.org/web/packages/RColorBrewer/RColorBrewer.pdf"
-CMD["rcolorbrewer"]="Rscript -e 'if (system.file(package=\"rcolorbrewer\") != \"\") {v <- packageVersion(\"rcolorbrewer\"); cat(toString(v))}'"
-TEST["rcolorbrewer"]=1.1.3
+URL["RColorBrewer"]="https://cran.r-project.org/web/packages/RColorBrewer/RColorBrewer.pdf"
+CMD["RColorBrewer"]="Rscript -e 'if (system.file(package=\"RColorBrewer\") != \"\") {v <- packageVersion(\"RColorBrewer\"); cat(toString(v))}'"
+TEST["RColorBrewer"]=1.1.3
 
-URL["rcpp"]="https://cran.r-project.org/web/packages/Rcpp/Rcpp.pdf \
+URL["Rcpp"]="https://cran.r-project.org/web/packages/Rcpp/Rcpp.pdf \
              https://cran.r-project.org/web/packages/Rcpp/vignettes/Rcpp-attributes.pdf \
              https://cran.r-project.org/web/packages/Rcpp/vignettes/Rcpp-extending.pdf \
              https://cran.r-project.org/web/packages/Rcpp/vignettes/Rcpp-FAQ.pdf \
@@ -291,19 +291,19 @@ URL["rcpp"]="https://cran.r-project.org/web/packages/Rcpp/Rcpp.pdf \
              https://cran.r-project.org/web/packages/Rcpp/vignettes/Rcpp-package.pdf \
              https://cran.r-project.org/web/packages/Rcpp/vignettes/Rcpp-quickref.pdf \
              https://cran.r-project.org/web/packages/Rcpp/vignettes/Rcpp-sugar.pdf"
-CMD["rcpp"]="Rscript -e 'if (system.file(package=\"rcpp\") != \"\") {v <- packageVersion(\"rcpp\"); cat(toString(v))}'"
-TEST["rcpp"]=1.0.11
+CMD["Rcpp"]="Rscript -e 'if (system.file(package=\"Rcpp\") != \"\") {v <- packageVersion(\"Rcpp\"); cat(toString(v))}'"
+TEST["Rcpp"]=1.0.11
 
-URL["rcpparmadillo"]="https://cran.r-project.org/web/packages/RcppArmadillo/RcppArmadillo.pdf \
+URL["RcppArmadillo"]="https://cran.r-project.org/web/packages/RcppArmadillo/RcppArmadillo.pdf \
                       https://cran.r-project.org/web/packages/RcppArmadillo/vignettes/RcppArmadillo-intro.pdf \
                       https://cran.r-project.org/web/packages/RcppArmadillo/vignettes/RcppArmadillo-sparseMatrix.pdf"
-CMD["rcpparmadillo"]="Rscript -e 'if (system.file(package=\"rcpparmadillo\") != \"\") {v <- packageVersion(\"rcpparmadillo\"); cat(toString(v))}'"
-TEST["rcpparmadillo"]=0.12.6.1.0
+CMD["RcppArmadillo"]="Rscript -e 'if (system.file(package=\"RcppArmadillo\") != \"\") {v <- packageVersion(\"RcppArmadillo\"); cat(toString(v))}'"
+TEST["RcppArmadillo"]=0.12.6.1.0
 
-URL["rcppeigen"]="https://cran.r-project.org/web/packages/RcppEigen/RcppEigen.pdf \
+URL["RcppEigen"]="https://cran.r-project.org/web/packages/RcppEigen/RcppEigen.pdf \
                   https://cran.r-project.org/web/packages/RcppEigen/vignettes/RcppEigen-Introduction.pdf"
-CMD["rcppeigen"]="Rscript -e 'if (system.file(package=\"rcppeigen\") != \"\") {v <- packageVersion(\"rcppeigen\"); cat(toString(v))}'"
-TEST["rcppeigen"]=0.3.3.9.3
+CMD["RcppEigen"]="Rscript -e 'if (system.file(package=\"RcppEigen\") != \"\") {v <- packageVersion(\"RcppEigen\"); cat(toString(v))}'"
+TEST["RcppEigen"]=0.3.3.9.3
 
 URL["readr"]="https://cran.r-project.org/web/packages/readr/readr.pdf \
               https://cran.r-project.org/web/packages/readr/vignettes/column-types.html \
