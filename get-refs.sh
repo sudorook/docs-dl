@@ -43,12 +43,12 @@ function download_wrapper {
       url="${url//MINOR/${version[1]}}"
       url="${url//PATCH/${version[2]}}"
     elif [ "${#version[@]}" -eq 2 ]; then
-      _version="${version[0]}.${version[1]}}"
+      _version="${version[0]}.${version[1]}"
       url="${url//MAJOR/${version[0]}}"
       url="${url//MINOR/${version[1]}}"
       url="${url//.PATCH/}"
     elif [ "${#version[@]}" -eq 1 ]; then
-      _version="${version[0]}}"
+      _version="${version[0]}"
       url="${url//MAJOR/${version[0]}}"
       url="${url//.MINOR/}"
       url="${url//.PATCH/}"
