@@ -76,6 +76,12 @@ function download_wrapper {
         else
           wget --quiet --show-progress -O "${bin}-${_version[*]}.zip" "${url}"
         fi
+      else
+        if [ "${#urls[@]}" -gt 1 ]; then
+          wget --quiet --show-progress -O "${bin}-${_version[*]}-${idx}.html" "${url}"
+        else
+          wget --quiet --show-progress -O "${bin}-${_version[*]}.html" "${url}"
+        fi
       fi
     else
       wget --quiet --show-progress -nc "${url}"
