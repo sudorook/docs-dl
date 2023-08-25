@@ -19,6 +19,10 @@ URL["assertthat"]="https://cran.r-project.org/web/packages/assertthat/assertthat
 CMD["assertthat"]="Rscript -e 'if (system.file(package=\"assertthat\") != \"\") {v <- packageVersion(\"assertthat\"); cat(toString(v))}'"
 TEST["assertthat"]=0.2.1
 
+URL["automake"]="https://www.gnu.org/software/automake/manual/automake.pdf"
+CMD["automake"]="automake --version"
+TEST["automake"]=1.16.5
+
 URL["awk"]="https://www.gnu.org/software/gawk/manual/gawk.pdf"
 CMD["awk"]="awk --version"
 TEST["awk"]=5.1.1
@@ -47,9 +51,32 @@ URL["bipartite"]="https://cran.r-project.org/web/packages/bipartite/bipartite.pd
 CMD["bipartite"]="Rscript -e 'if (system.file(package=\"bipartite\") != \"\") {v <- packageVersion(\"bipartite\"); cat(toString(v))}'"
 TEST["bipartite"]=2.18
 
+URL["bison"]="https://www.gnu.org/software/bison/manual/bison.pdf"
+CMD["bison"]="bison --version"
+TEST["bison"]=3.8.2
+
 URL["black"]="https://black.readthedocs.io/_/downloads/en/latest/htmlzip/"
 CMD["black"]="python -c 'from black import __version__ as v; print(v)'"
 TEST["black"]=23.7.0
+
+URL["blender"]="https://docs.blender.org/manual/en/MAJOR.MINOR/blender_manual_html.zip"
+CMD["blender"]="blender --version"
+TEST["blender"]=3.6.0
+
+URL["clang"]="https://releases.llvm.org/16.0.0/tools/clang/docs/UsersManual.html \
+              https://releases.llvm.org/16.0.0/tools/clang/docs/Toolchain.html \
+              https://releases.llvm.org/16.0.0/tools/clang/docs/LanguageExtensions.html \
+              https://releases.llvm.org/16.0.0/tools/clang/docs/ClangCommandLineReference.html \
+              https://releases.llvm.org/16.0.0/tools/clang/docs/DiagnosticsReference.html \
+              https://releases.llvm.org/16.0.0/tools/clang/docs/CrossCompilation.html \
+              https://releases.llvm.org/16.0.0/tools/clang/docs/ClangStaticAnalyzer.html \
+              https://releases.llvm.org/16.0.0/tools/clang/docs/ThreadSafetyAnalysis.html \
+              https://releases.llvm.org/16.0.0/tools/clang/docs/StandardCPlusPlusModules.html \
+              https://releases.llvm.org/16.0.0/tools/clang/docs/Modules.html \
+              https://releases.llvm.org/16.0.0/tools/clang/docs/OpenCLSupport.html \
+              https://releases.llvm.org/16.0.0/tools/clang/docs/OpenMPSupport.html"
+CMD["clang"]="clang --version"
+TEST["clang"]=15.0.7
 
 URL["coreutils"]="https://www.gnu.org/software/coreutils/manual/coreutils.pdf"
 CMD["coreutils"]="ls --version"
@@ -74,10 +101,18 @@ URL["data.table"]="https://cran.r-project.org/web/packages/data.table/data.table
 CMD["data.table"]="Rscript -e 'if (system.file(package=\"data.table\") != \"\") {v <- packageVersion(\"data.table\"); cat(toString(v))}'"
 TEST["data.table"]=1.14.8
 
+URL["ddrescue"]="https://www.gnu.org/software/ddrescue/manual/ddrescue_manual.html"
+CMD["ddrescue"]="ddrescue --version"
+TEST["ddrescue"]=1.27
+
 URL["devtools"]="https://cran.r-project.org/web/packages/devtools/devtools.pdf \
                  https://cran.r-project.org/web/packages/devtools/vignettes/dependencies.html"
 CMD["devtools"]="Rscript -e 'if (system.file(package=\"devtools\") != \"\") {v <- packageVersion(\"devtools\"); cat(toString(v))}'"
 TEST["devtools"]=2.4.5
+
+URL["diffutils"]="https://www.gnu.org/software/diffutils/manual/diffutils.pdf"
+CMD["diffutils"]="diff --version"
+TEST["diffutils"]=3.10
 
 URL["dplyr"]="https://cran.r-project.org/web/packages/dplyr/dplyr.pdf \
               https://cran.r-project.org/web/packages/dplyr/vignettes/base.html \
@@ -120,6 +155,10 @@ URL["gcc"]="https://gcc.gnu.org/onlinedocs/gcc-MAJOR.MINOR.0/gcc.pdf \
 CMD["gcc"]="gcc --version"
 TEST["gcc"]=11.2.0
 
+URL["gdb"]="https://sourceware.org/gdb/download/onlinedocs/gdb.pdf"
+CMD["gdb"]="gdb --version"
+TEST["gdb"]=13.2
+
 URL["ggplot"]="https://cran.r-project.org/web/packages/ggplot2/ggplot2.pdf \
                https://cran.r-project.org/web/packages/ggplot2/vignettes/extending-ggplot2.html \
                https://cran.r-project.org/web/packages/ggplot2/vignettes/ggplot2-in-packages.html \
@@ -128,9 +167,19 @@ URL["ggplot"]="https://cran.r-project.org/web/packages/ggplot2/ggplot2.pdf \
 CMD["ggplot"]="Rscript -e 'if (system.file(package=\"ggplot2\") != \"\") {v <- packageVersion(\"ggplot2\"); cat(toString(v))}'"
 TEST["ggplot"]=3.4.3
 
+# https://download.gimp.org/mirror/pub/gimp/help/gimp-help-2.10.34.tar.bz2
 URL["gimp"]="https://download.gimp.org/pub/gimp/help/gimp-help-MAJOR.MINOR.0.tar.bz2"
 CMD["gimp"]="gimp --version"
 TEST["gimp"]=2.10.30
+
+URL["git"]="https://github.com/progit/progit2/releases/download/2.1.406/progit.pdf \
+            https://training.github.com/downloads/github-git-cheat-sheet.pdf"
+CMD["git"]="git --version"
+TEST["git"]=2.42.0
+
+URL["glibc"]="https://www.gnu.org/software/libc/manual/MAJOR.MINOR/pdf/libc.pdf"
+CMD["glibc"]="ldd --version"
+TEST["glibc"]=2.38
 
 URL["glmnet"]="https://cran.r-project.org/web/packages/glmnet/glmnet.pdf \
                https://cran.r-project.org/web/packages/glmnet/vignettes/Coxnet.pdf \
@@ -140,10 +189,23 @@ URL["glmnet"]="https://cran.r-project.org/web/packages/glmnet/glmnet.pdf \
 CMD["glmnet"]="Rscript -e 'if (system.file(package=\"glmnet\") != \"\") {v <- packageVersion(\"glmnet\"); cat(toString(v))}'"
 TEST["glmnet"]=4.1.8
 
+URL["grep"]="https://www.gnu.org/software/grep/manual/grep.pdf"
+CMD["grep"]="grep --version"
+TEST["grep"]=3.11
+
+URL["gsl"]="https://www.gnu.org/software/gsl/doc/latex/gsl-ref.pdf"
+CMD["gsl"]="pkg-config --modversion gsl"
+TEST["gsl"]=2.7.1
+
 URL["igraph"]="https://cran.r-project.org/web/packages/igraph/igraph.pdf \
                https://cran.r-project.org/web/packages/igraph/vignettes/igraph.html"
 CMD["igraph"]="Rscript -e 'if (system.file(package=\"igraph\") != \"\") {v <- packageVersion(\"igraph\"); cat(toString(v))}'"
 TEST["igraph"]=1.5.1
+
+URL["imagemagick"]="https://imagemagick.org/script/command-line-processing.php \
+                    https://imagemagick.org/script/command-line-options.php"
+CMD["imagemagick"]="magick -version"
+TEST["imagemagick"]=7.1.1
 
 URL["inkscape"]="https://inkscape-manuals.readthedocs.io/_/downloads/en/latest/pdf/"
 CMD["inkscape"]="inkscape --version"
@@ -157,6 +219,10 @@ TEST["interplot"]=0.2.3
 URL["gitpython"]="https://gitpython.readthedocs.io/_/downloads/en/MAJOR.MINOR.PATCH/pdf/"
 CMD["gitpython"]="python -c 'from git import __version__ as v; print(v)'"
 TEST["gitpython"]=3.1.32
+
+URL["jq"]="https://jqlang.github.io/jq/manual/v1.6/"
+CMD["jq"]="jq --version"
+TEST["jq"]=1.6
 
 URL["julia"]="https://raw.githubusercontent.com/JuliaLang/docs.julialang.org/assets/julia-MAJOR.MINOR.PATCH.pdf"
 CMD["julia"]="julia --version"
@@ -203,13 +269,25 @@ URL["MASS"]="https://cran.r-project.org/web/packages/MASS/MASS.pdf"
 CMD["MASS"]="Rscript -e 'if (system.file(package=\"MASS\") != \"\") {v <- packageVersion(\"MASS\"); cat(toString(v))}'"
 TEST["MASS"]=7.3.60
 
+URL["make"]="https://www.gnu.org/software/make/manual/make.pdf"
+CMD["make"]="make --version"
+TEST["make"]=4.4.1
+
 URL["matplotlib"]="https://matplotlib.org/MAJOR.MINOR.PATCH/Matplotlib.pdf"
 CMD["matplotlib"]="python -c 'from matplotlib import __version__ as v; print(v)'"
 TEST["matplotlib"]=3.5.1
 
+URL["meson"]=""
+CMD["meson"]="meson --version"
+TEST["meson"]=1.2.1
+
 URL["mpi4py"]="https://mpi4py.readthedocs.io/_/downloads/en/MAJOR.MINOR.PATCH/pdf/"
 CMD["mpi4py"]="python -c 'from mpi4py import __version__ as v; print(v)'"
 TEST["mpi4py"]=3.1.4
+
+URL["mpv"]="https://mpv.io/manual/stable/"
+CMD["mpv"]="mpv --version"
+TEST["mpv"]=0.36.0
 
 URL["mvtnorm"]="https://cran.r-project.org/web/packages/mvtnorm/mvtnorm.pdf \
                 https://cran.r-project.org/web/packages/mvtnorm/vignettes/MVT_Rnews.pdf \
@@ -237,6 +315,14 @@ TEST["optparse"]=1.7.3
 URL["pandas"]="https://pandas.pydata.org/pandas-docs/version/MAJOR.MINOR.PATCH/pandas.zip"
 CMD["pandas"]="python -c 'from pandas import __version__ as v; print(v)'"
 TEST["pandas"]=1.4.1
+
+URL["pandoc"]="https://pandoc.org/MANUAL.pdf"
+CMD["pandoc"]="pandoc --version"
+TEST["pandoc"]=3.1.2
+
+URL["parted"]="https://www.gnu.org/software/parted/manual/parted.pdf"
+CMD["parted"]="parted --version"
+TEST["parted"]=3.6
 
 URL["patchwork"]="https://cran.r-project.org/web/packages/patchwork/patchwork.pdf \
                   https://cran.r-project.org/web/packages/patchwork/vignettes/patchwork.html"
@@ -321,6 +407,13 @@ URL["rmarkdown"]="https://cran.r-project.org/web/packages/rmarkdown/rmarkdown.pd
 CMD["rmarkdown"]="Rscript -e 'if (system.file(package=\"rmarkdown\") != \"\") {v <- packageVersion(\"rmarkdown\"); cat(toString(v))}'"
 TEST["rmarkdown"]=2.24
 
+URL["rsync"]="https://download.samba.org/pub/rsync/rsync.1 \
+              https://download.samba.org/pub/rsync/rsync-ssl.1 \
+              https://download.samba.org/pub/rsync/rsyncd.conf.5 \
+              https://download.samba.org/pub/rsync/rrsync.1"
+CMD["rsync"]="rsync --version"
+TEST["rsync"]=3.2.7
+
 URL["rvest"]="https://cran.r-project.org/web/packages/rvest/rvest.pdf \
               https://cran.r-project.org/web/packages/rvest/vignettes/rvest.html \
               https://cran.r-project.org/web/packages/rvest/vignettes/starwars.html"
@@ -347,12 +440,31 @@ URL["sklearn"]="https://scikit-learn.org/MAJOR.MINOR/_downloads/scikit-learn-doc
 CMD["sklearn"]="python -c 'from sklearn import __version__ as v; print(v)'"
 TEST["sklearn"]=1.0.2
 
+URL["ssh"]="https://man.openbsd.org/ssh \
+            https://man.openbsd.org/sshd \
+            https://man.openbsd.org/ssh_config \
+            https://man.openbsd.org/sshd_config \
+            https://man.openbsd.org/ssh-agent \
+            https://man.openbsd.org/ssh-add \
+            https://man.openbsd.org/sftp \
+            https://man.openbsd.org/scp \
+            https://man.openbsd.org/ssh-keygen \
+            https://man.openbsd.org/sftp-server \
+            https://man.openbsd.org/ssh-keyscan \
+            https://man.openbsd.org/ssh-keysign"
+CMD["ssh"]="ssh -V"
+TEST["ssh"]=9.4p1
+
 URL["stringr"]="https://cran.r-project.org/web/packages/stringr/stringr.pdf \
                 https://cran.r-project.org/web/packages/stringr/vignettes/from-base.html \
                 https://cran.r-project.org/web/packages/stringr/vignettes/regular-expressions.html \
                 https://cran.r-project.org/web/packages/stringr/vignettes/stringr.html"
 CMD["stringr"]="Rscript -e 'if (system.file(package=\"stringr\") != \"\") {v <- packageVersion(\"stringr\"); cat(toString(v))}'"
 TEST["stringr"]=1.5.0
+
+URL["tar"]="https://www.gnu.org/software/tar/manual/tar.pdf"
+CMD["tar"]="tar --version"
+TEST["tar"]=1.35
 
 URL["testthat"]="https://cran.r-project.org/web/packages/testthat/testthat.pdf"
 CMD["testthat"]="Rscript -e 'if (system.file(package=\"testthat\") != \"\") {v <- packageVersion(\"testthat\"); cat(toString(v))}'"
