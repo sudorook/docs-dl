@@ -28,6 +28,7 @@ function test_urls {
         url="${url//PATCH/${version[2]}}"
       elif [ "${#version[@]}" -eq 2 ]; then
         url="${url//MAJOR/${version[0]}}"
+        url="${url//MINOR/${version[1]}}"
         url="${url//.PATCH/}"
       elif [ "${#version[@]}" -eq 1 ]; then
         url="${url//MAJOR/${version[0]}}"
