@@ -29,9 +29,8 @@ function test_parser {
   fi
 }
 
-ALL_GOOD=true
-
 if [ "${0}" = "${BASH_SOURCE[0]}" ]; then
+  ALL_GOOD=true
   if [ "${#}" -eq 0 ]; then
     for KEY in "${!CMD[@]}"; do
       if ! test_parser "${KEY}"; then
@@ -49,6 +48,6 @@ if [ "${0}" = "${BASH_SOURCE[0]}" ]; then
       fi
     done
   fi
+  "${ALL_GOOD}" && exit 0 || exit 1
 fi
 
-"${ALL_GOOD}" && exit 0 || exit 1
