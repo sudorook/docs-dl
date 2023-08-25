@@ -151,7 +151,8 @@ CMD["fish"]="fish --version"
 TEST["fish"]=3.3.1
 
 URL["gcc"]="https://gcc.gnu.org/onlinedocs/gcc-MAJOR.MINOR.0/gcc.pdf \
-            https://gcc.gnu.org/onlinedocs/gcc-MAJOR.MINOR.0/libstdc++-manual.pdf.gz"
+            https://gcc.gnu.org/onlinedocs/gcc-MAJOR.MINOR.0/libstdc++-manual.pdf.gz \
+            https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.pdf"
 CMD["gcc"]="gcc --version"
 TEST["gcc"]=11.2.0
 
