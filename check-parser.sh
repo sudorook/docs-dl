@@ -1,53 +1,31 @@
 #! /bin/bash
 set -euo pipefail
-source globals
-source data
-source ./get-refs.sh
 
-function test_parser {
-  local version
-  local key="${1}"
-  local cmd
+ROOT="$(dirname "${0}")"
 
-  cmd="${CMD["${key}"]}"
-  if version="$(eval "${cmd}" 2> /dev/null | parse_version)"; then
-    if ! [[ "${version}" =~ ^[0-9]+(\.[0-9]+)?(\.[0-9]+)?(\.[0-9]+)?(\.[0-9]+)?$ ]]; then
-      show_error "✗ ${key}"
-      return 1
-    else
-      show_success "✓ ${key}"
-      return 0
+source "${ROOT}"/data
+source "${ROOT}"/globals
+
+! check_command wget grep sed && exit 3
+
+ALL_GOOD=true
+
+if [ "${#}" -eq 0 ]; then
+  for KEY in "${!CMD[@]}"; do
+    if ! test_parser "${KEY}"; then
+      ALL_GOOD=false
     fi
-  else
-    if command -v "${key%% *}" > /dev/null; then
-      show_error "✗ ${key}"
-      return 1
-    else
-      show_warning "？${key}"
-      return 0
-    fi
-  fi
-}
-
-if [ "${0}" = "${BASH_SOURCE[0]}" ]; then
-  ALL_GOOD=true
-  if [ "${#}" -eq 0 ]; then
-    for KEY in "${!CMD[@]}"; do
+  done
+else
+  for KEY in "${@}"; do
+    if [ -n "${CMD[${KEY}]-}" ]; then
       if ! test_parser "${KEY}"; then
         ALL_GOOD=false
       fi
-    done
-  else
-    for KEY in "${@}"; do
-      if [ -n "${CMD[${KEY}]-}" ]; then
-        if ! test_parser "${KEY}"; then
-          ALL_GOOD=false
-        fi
-      else
-        show_error "ERROR: ${KEY@Q} not found."
-      fi
-    done
-  fi
-  "${ALL_GOOD}" && exit 0 || exit 1
+    else
+      show_error "ERROR: ${KEY@Q} not found."
+    fi
+  done
 fi
 
+"${ALL_GOOD}" && exit 0 || exit 1
