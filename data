@@ -288,10 +288,6 @@ URL["matplotlib"]="https://matplotlib.org/MAJOR.MINOR.PATCH/Matplotlib.pdf"
 CMD["matplotlib"]="python -c 'from matplotlib import __version__ as v; print(v)'"
 TEST["matplotlib"]=3.5.1
 
-URL["meson"]=""
-CMD["meson"]="meson --version"
-TEST["meson"]=1.2.1
-
 URL["mpi4py"]="https://mpi4py.readthedocs.io/_/downloads/en/MAJOR.MINOR.PATCH/pdf/"
 CMD["mpi4py"]="python -c 'from mpi4py import __version__ as v; print(v)'"
 TEST["mpi4py"]=3.1.4
