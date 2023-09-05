@@ -23,7 +23,7 @@ TEST["ape"]=5.7.1
 
 URL["armadillo"]="http://arma.sourceforge.net/docs.html"
 CMD["armadillo"]="pkg-config --modversion armadillo"
-TEST["armadillo"]=11.0.0
+TEST["armadillo"]=12.6.3
 
 URL["assertthat"]="https://cran.r-project.org/web/packages/assertthat/assertthat.pdf"
 CMD["assertthat"]="$(r_cmd "assertthat")"
