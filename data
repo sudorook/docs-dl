@@ -92,6 +92,15 @@ URL["coreutils"]="https://www.gnu.org/software/coreutils/manual/coreutils.pdf"
 CMD["coreutils"]="ls --version"
 TEST["coreutils"]=9.0
 
+URL["cuda"]="https://docs.nvidia.com/cuda/archive/MAJOR.MINOR.PATCH/pdf/CUDA_Quick_Start_Guide.pdf \
+             https://docs.nvidia.com/cuda/archive/MAJOR.MINOR.PATCH/pdf/CUDA_C_Programming_Guide.pdf \
+             https://docs.nvidia.com/cuda/archive/MAJOR.MINOR.PATCH/pdf/CUDA_C_Best_Practices_Guide.pdf \
+             https://docs.nvidia.com/cuda/archive/MAJOR.MINOR.PATCH/pdf/CUDA_Runtime_API.pdf \
+             https://docs.nvidia.com/cuda/archive/MAJOR.MINOR.PATCH/pdf/CUDA_Driver_API.pdf \
+             https://docs.nvidia.com/cuda/archive/MAJOR.MINOR.PATCH/pdf/CUDA_Math_API.pdf"
+CMD["cuda"]="pkg-config --modversion cuda"
+TEST["cuda"]=11.0
+
 URL["curl"]="https://curl.se/docs/manual.html \
              https://curl.se/docs/manpage.html"
 CMD["curl"]="curl --version"
