@@ -9,6 +9,11 @@ function try_wget {
 }
 export -f try_wget
 
+function try_curl {
+  curl -ILs --retry 5 --retry-connrefused "${1}" > /dev/null
+}
+export -f try_curl
+
 function test_url {
   local version
   local url
@@ -34,7 +39,7 @@ function test_url {
       url="${url//.MINOR/}"
       url="${url//.PATCH/}"
     fi
-    if try_wget "${url}"; then
+    if try_curl "${url}"; then
       show_success "${key}: ${url}"
     else
       show_error "${key}: ${url}"
@@ -136,29 +141,32 @@ function download_wrapper {
         _version="unknown"
       fi
     fi
+    if [[ "${url}" =~ YEAR ]] && [ -n "${year[*]}" ]; then
+      url="${url//YEAR/${year[0]}}"
+    fi
     if [[ ${url:${#url}-1:1} = "/" ]]; then
       IFS="."
       if [[ "${url:${#url}-4:4}" = "pdf/" ]]; then
         if [ "${#urls[@]}" -gt 1 ]; then
-          wget --quiet --show-progress -O "${bin}-${_version[*]}-${idx}.pdf" "${url}"
+          curl -# -C - -o "${bin}-${_version[*]}-${idx}.pdf" "${url}"
         else
-          wget --quiet --show-progress -O "${bin}-${_version[*]}.pdf" "${url}"
+          curl -# -C - -o "${bin}-${_version[*]}.pdf" "${url}"
         fi
       elif [[ "${url:${#url}-8:8}" = "htmlzip/" ]]; then
         if [ "${#urls[@]}" -gt 1 ]; then
-          wget --quiet --show-progress -O "${bin}-${_version[*]}-${idx}.zip" "${url}"
+          curl -# -C - -o "${bin}-${_version[*]}-${idx}.zip" "${url}"
         else
-          wget --quiet --show-progress -O "${bin}-${_version[*]}.zip" "${url}"
+          curl -# -C - -o "${bin}-${_version[*]}.zip" "${url}"
         fi
       else
         if [ "${#urls[@]}" -gt 1 ]; then
-          wget --quiet --show-progress -O "${bin}-${_version[*]}-${idx}.html" "${url}"
+          curl -# -C - -o "${bin}-${_version[*]}-${idx}.html" "${url}"
         else
-          wget --quiet --show-progress -O "${bin}-${_version[*]}.html" "${url}"
+          curl -# -C - -o "${bin}-${_version[*]}.html" "${url}"
         fi
       fi
     else
-      wget --quiet --show-progress -nc "${url}"
+      curl -#O -C - "${url}"
     fi
   done
 }
