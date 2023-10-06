@@ -114,6 +114,7 @@ function download_wrapper {
   year="$(eval "${cmd}" 2> /dev/null | parse_year)"
 
   IFS=' ' read -r -a urls <<< "${URL["${bin}"]}"
+  echo "downloading ${bin@Q}"
   for idx in "${!urls[@]}"; do
     url="${urls["${idx}"]}"
     if [ "${#version[@]}" -eq 3 ]; then
@@ -144,6 +145,7 @@ function download_wrapper {
     if [[ "${url}" =~ YEAR ]] && [ -n "${year[*]}" ]; then
       url="${url//YEAR/${year[0]}}"
     fi
+    echo "${url@Q}"
     if [[ ${url:${#url}-1:1} = "/" ]]; then
       IFS="."
       if [[ "${url:${#url}-4:4}" = "pdf/" ]]; then
@@ -169,6 +171,7 @@ function download_wrapper {
       curl -#O -C - "${url}"
     fi
   done
+  echo
 }
 export -f download_wrapper
 
