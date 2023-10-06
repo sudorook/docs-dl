@@ -79,10 +79,16 @@ function parse_version {
 }
 export -f parse_version
 
+function parse_year {
+  sed -n "s,.*\(20[0-9]\{2\}\).*,\1,p" | head -n 1
+}
+export -f parse_year
+
 function download_wrapper {
   local bin="${1}"
   local cmd
   local version
+  local year
   local _version
   local url
   local urls
@@ -99,6 +105,8 @@ function download_wrapper {
     show_warning "${bin@Q} not installed. Skipping."
     return
   fi
+
+  year="$(eval "${cmd}" 2> /dev/null | parse_year)"
 
   IFS=' ' read -r -a urls <<< "${URL["${bin}"]}"
   for idx in "${!urls[@]}"; do

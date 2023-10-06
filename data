@@ -456,6 +456,10 @@ URL["sklearn"]="https://scikit-learn.org/MAJOR.MINOR/_downloads/scikit-learn-doc
 CMD["sklearn"]="python -c 'from sklearn import __version__ as v; print(v)'"
 TEST["sklearn"]=1.0.2
 
+URL["sqlite"]="https://sqlite.org/YEAR/sqlite-doc-MAJORMINOR0PATCH00.zip"
+CMD["sqlite"]="sqlite3 --version"
+TEST["sqlite"]=3.43.1
+
 URL["ssh"]="https://man.openbsd.org/ssh \
             https://man.openbsd.org/sshd \
             https://man.openbsd.org/ssh_config \
