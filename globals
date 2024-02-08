@@ -287,7 +287,7 @@ check_command() {
   if [ ${#missing[@]} -eq 0 ]; then
     return 0
   else
-    show_error "MISSING: ${missing[*]@Q} not installed." >&1
+    show_error "MISSING: ${missing[*]@Q} not installed."
     return 1
   fi
 }
