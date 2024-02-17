@@ -2,11 +2,11 @@
 
 function r_cmd {
   cat << EOF
-Rscript -e \
-'if (system.file(package="${1}") != "") { \
-   v <- packageVersion("${1}"); \
-   cat(toString(v)); \
- }'
+Rscript -e '
+  if (system.file(package="${1}") != "") {
+    v <- packageVersion("${1}")
+    cat(toString(v))
+  }'
 EOF
 }
 
