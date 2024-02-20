@@ -6,7 +6,7 @@ ROOT="$(dirname "${0}")"
 source "${ROOT}"/data
 source "${ROOT}"/globals
 
-! check_command wget grep sed && exit 3
+! check_command grep sed && exit 3
 
 ALL_GOOD=true
 
