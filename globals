@@ -57,7 +57,7 @@ function test_parser {
   local cmd
 
   cmd="${CMD["${key}"]}"
-  if version="$(eval "${cmd}" 2> /dev/null | parse_version)"; then
+  if version="$(eval "${cmd}" 2>&1 | parse_version)"; then
     if ! [[ "${version}" =~ ^[0-9]+(\.[0-9]+)?(\.[0-9]+)?(\.[0-9]+)?(\.[0-9]+)?$ ]]; then
       show_error "✗ ${key}"
       return 1
