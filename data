@@ -101,7 +101,7 @@ URL["cuda"]="https://docs.nvidia.com/cuda/archive/MAJOR.MINOR.PATCH/pdf/CUDA_Qui
 CMD["cuda"]="pkg-config --modversion cuda"
 TEST["cuda"]=11.0
 
-URL["curl"]="https://curl.se/docs/manual.html \
+URL["curl"]="https://curl.se/docs/tutorial.html \
              https://curl.se/docs/manpage.html"
 CMD["curl"]="curl --version"
 TEST["curl"]=8.2.1
