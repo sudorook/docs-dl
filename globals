@@ -150,25 +150,25 @@ function download_wrapper {
       IFS="."
       if [[ "${url:${#url}-4:4}" = "pdf/" ]]; then
         if [ "${#urls[@]}" -gt 1 ]; then
-          curl -# -C - -o "${bin}-${_version[*]}-${idx}.pdf" "${url}"
+          curl -#L -C - -o "${bin}-${_version[*]}-${idx}.pdf" "${url}"
         else
-          curl -# -C - -o "${bin}-${_version[*]}.pdf" "${url}"
+          curl -#L -C - -o "${bin}-${_version[*]}.pdf" "${url}"
         fi
       elif [[ "${url:${#url}-8:8}" = "htmlzip/" ]]; then
         if [ "${#urls[@]}" -gt 1 ]; then
-          curl -# -C - -o "${bin}-${_version[*]}-${idx}.zip" "${url}"
+          curl -#L -C - -o "${bin}-${_version[*]}-${idx}.zip" "${url}"
         else
-          curl -# -C - -o "${bin}-${_version[*]}.zip" "${url}"
+          curl -#L -C - -o "${bin}-${_version[*]}.zip" "${url}"
         fi
       else
         if [ "${#urls[@]}" -gt 1 ]; then
-          curl -# -C - -o "${bin}-${_version[*]}-${idx}.html" "${url}"
+          curl -#L -C - -o "${bin}-${_version[*]}-${idx}.html" "${url}"
         else
-          curl -# -C - -o "${bin}-${_version[*]}.html" "${url}"
+          curl -#L -C - -o "${bin}-${_version[*]}.html" "${url}"
         fi
       fi
     else
-      curl -#O -C - "${url}"
+      curl -#OL -C - "${url}"
     fi
   done
   echo
