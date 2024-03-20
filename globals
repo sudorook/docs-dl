@@ -85,7 +85,7 @@ function parse_version {
 export -f parse_version
 
 function parse_year {
-  sed -n "s,.*\(20[0-9]\{2\}\).*,\1,p" | head -n 1
+  sed -n "s,.*[\ -]\(20[0-9]\{2\}\)[\ -].*,\1,p" | head -n 1
 }
 export -f parse_year
 
