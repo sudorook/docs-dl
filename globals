@@ -185,7 +185,20 @@ function download_wrapper {
         fi
       fi
     else
-      curl -#OL -C - "${url}"
+      if [ "${_version}" = unknown ] && [ "${#urls[@]}" -eq 1 ]; then
+        local version_string
+        version_string=$(printf ".%s" "${version[@]}")
+        version_string="${version_string:1}"
+        if [[ "${url:${#url}-3:3}" = "pdf" ]]; then
+          curl -#L -C - -o "${bin}-${version_string}.pdf" "${url}"
+        elif [[ "${url:${#url}-4:4}" = "html" ]]; then
+          curl -#L -C - -o "${bin}-${version_string}.html" "${url}"
+        else
+          curl -#OL -C - "${url}"
+        fi
+      else
+        curl -#OL -C - "${url}"
+      fi
     fi
   done
   echo
