@@ -164,7 +164,7 @@ URL["dplyr"]="https://cran.r-project.org/web/packages/dplyr/dplyr.pdf \
 CMD["dplyr"]="$(r_cmd "dplyr")"
 TEST["dplyr"]=1.1.2
 
-URL["eigen"]="https://eigen.tuxfamily.org/dox/eigen-doc.tgz"
+URL["eigen"]="https://libeigen.gitlab.io/docs/eigen-doc.tgz"
 CMD["eigen"]="pkg-config --modversion eigen3"
 TEST["eigen"]=3.4.0
 
