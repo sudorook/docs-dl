@@ -32,6 +32,8 @@ if [ "${#}" -eq 0 ]; then
   for KEY in "${!TEST[@]}"; do
     if ! test_url "${KEY}"; then
       ALL_GOOD=false
+    else
+      sleep 1s
     fi
   done
 else
@@ -39,6 +41,8 @@ else
     if [ -n "${CMD[${KEY}]-}" ]; then
       if ! test_url "${KEY}"; then
         ALL_GOOD=false
+      else
+        sleep 1s
       fi
     else
       show_error "ERROR: ${KEY@Q} not found."
