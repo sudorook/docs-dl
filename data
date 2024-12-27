@@ -209,7 +209,7 @@ URL["gimp"]="https://download.gimp.org/pub/gimp/help/gimp-help-MAJOR.MINOR.0.tar
 CMD["gimp"]="gimp --version"
 TEST["gimp"]=2.10.30
 
-URL["git"]="https://github.com/progit/progit2/releases/download/2.1.406/progit.pdf \
+URL["git"]="https://github.com/progit/progit2/releases/download/2.1.423/progit.pdf \
             https://training.github.com/downloads/github-git-cheat-sheet.pdf"
 CMD["git"]="git --version"
 TEST["git"]=2.42.0
